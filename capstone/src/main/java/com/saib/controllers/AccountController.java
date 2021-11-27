@@ -29,7 +29,7 @@ public class AccountController {
 	 *  PUT - /accounts/id - Updating an existing account 
 	 *  DELETE -/accounts/id - for deleting an account from db
 	 *  
-	 *  
+	 *  s
 	 */
 	@Autowired
 	AccountService accountService;
