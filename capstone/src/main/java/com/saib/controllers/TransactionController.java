@@ -32,7 +32,7 @@ public class TransactionController {
 	 *  GET - /transaction/type - Get all transaction with a given type
 	 *  POST - /transaction - Creating a new transaction 
 	 *  PUT - /transaction/id - Updating an existing transaction 
-	 *  DELETE -/transaction/id - for deleting an transaction from db
+	 *  DELETE -/transaction/id -for deleting an transaction from db
 	 *  
 	 *  
 	 */
