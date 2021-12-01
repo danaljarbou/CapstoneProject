@@ -10,11 +10,10 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-
 @Table(name = "account")
 public class Account {
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	//@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name="account_number")
 	private long accountNumber;
 	
@@ -177,8 +176,6 @@ public class Account {
 				+ ", creditLimit=" + creditLimit + ", creationDate=" + creationDate + ", lastUpdated=" + lastUpdated
 				+ ", status=" + status + "]";
 	}
-	
-	
 
 	
 	

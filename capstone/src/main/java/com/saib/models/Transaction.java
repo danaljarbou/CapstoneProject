@@ -1,6 +1,9 @@
 package com.saib.models;
 
+import java.time.LocalDate;
+
 import java.time.LocalDateTime;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +12,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 
 
 @Entity
@@ -16,7 +21,7 @@ import javax.persistence.Table;
 @Table(name = "transaction")
 public class Transaction {
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	//@GeneratedValue (strategy = GenerationType.IDENTITY)
 	@Column(name="transaction_id")
 	private long transactionId;
 	
@@ -42,7 +47,7 @@ public class Transaction {
 	private double amount;
 	
 	@Column(name="date")
-	private LocalDateTime date;
+	private LocalDate date;
 	
 	@Column(name="time")
 	private LocalDateTime time;
@@ -59,7 +64,7 @@ public class Transaction {
 	}
 
 	public Transaction(long transactionId, long fromAccount, long toAccount, String fromAccountName,
-			String toAccountName, Boolean sameBankTransaction, String otherBank, double amount, LocalDateTime date,
+			String toAccountName, Boolean sameBankTransaction, String otherBank, double amount, LocalDate date,
 			LocalDateTime time, String transactionType, String status) {
 		super();
 		this.transactionId = transactionId;
@@ -140,11 +145,11 @@ public class Transaction {
 		this.amount = amount;
 	}
 
-	public LocalDateTime getDate() {
+	public LocalDate getDate() {
 		return date;
 	}
 
-	public void setDate(LocalDateTime date) {
+	public void setDate(LocalDate date) {
 		this.date = date;
 	}
 

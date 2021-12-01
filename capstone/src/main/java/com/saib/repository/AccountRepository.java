@@ -11,5 +11,5 @@ import com.saib.models.Account;
 public interface AccountRepository extends JpaRepository<Account,Long>{
 
 	  List<Account> findByAccountType(String accountType);
-	 
+	 public List<Account> findAccountByGender(String gender);
 }
